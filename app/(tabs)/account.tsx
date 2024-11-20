@@ -11,9 +11,6 @@ export default function Account() {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1 }}>
         <Text>Account</Text>
-        <Link href={"/accountInfo"}>
-          <Text>Take me to Account Info</Text>
-        </Link>
         <Button
           onPress={() => setPictureOpen(true)}
           title="Open Bottom Sheet"
