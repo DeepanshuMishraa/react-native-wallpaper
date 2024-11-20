@@ -9,15 +9,6 @@ export default function Layout() {
         options={{
           title: "For you",
           tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="home" color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="account"
-        options={{
-          title: "Accounts",
-          tabBarIcon: ({ color }) => (
             <FontAwesome size={28} name="cog" color={color} />
           ),
         }}
@@ -26,6 +17,15 @@ export default function Layout() {
         name="explore"
         options={{
           title: "Explore",
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="home" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="account"
+        options={{
+          title: "Accounts",
           tabBarIcon: ({ color }) => (
             <FontAwesome size={28} name="cog" color={color} />
           ),
