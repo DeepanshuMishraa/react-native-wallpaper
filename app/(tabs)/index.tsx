@@ -1,12 +1,30 @@
-import { Link } from "expo-router";
-import { useEffect, useState } from "react";
-import { Button, Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import { Text, View } from "react-native";
+
+const Tab = createMaterialTopTabNavigator();
 
 export default function () {
   return (
-    <SafeAreaView>
-      <Text>Index Page</Text>
-    </SafeAreaView>
+    <Tab.Navigator>
+      <Tab.Screen name="Library" component={HomeScreen} />
+      <Tab.Screen name="Liked" component={SettingsScreen} />
+      <Tab.Screen name="Suggested" component={SettingsScreen} />
+    </Tab.Navigator>
+  );
+}
+
+function HomeScreen() {
+  return (
+    <View>
+      <Text>Home Screen welcomes you</Text>
+    </View>
+  );
+}
+
+function SettingsScreen() {
+  return (
+    <View>
+      <Text>Setting Screen welcomes you</Text>
+    </View>
   );
 }
